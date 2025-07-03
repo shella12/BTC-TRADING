@@ -1,0 +1,11 @@
+{
+    "manifest_version": 3,
+    "name": "BTCUSDT Signal",
+    "version": "1.0",
+    "action": {
+      "default_popup": "popup.html"
+    },
+    "permissions": ["storage"],
+    "host_permissions": ["http://localhost:5000/"]
+  }
+  
