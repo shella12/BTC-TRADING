@@ -6,7 +6,7 @@
 
 ## Project Overview
 
-This project is a real-time AI classifier that predicts whether BTCUSDT will go "high" or "low" in the next 10 minutes, based on 1-minute candlestick data. It uses features such as EMA30, EMA50, MACD, Bollinger Bands, and volume. The model outputs both the predicted class and its confidence (probability), helping traders make quick, data-driven decisions.
+This project is a real-time AI classifier/predictor that predicts whether BTCUSDT will go "high" or "low" in the next 10 minutes, based on 1-minute candlestick data. It uses features such as EMA30, EMA50, MACD, RSI, Bollinger Bands, and volume. The model outputs both the predicted class and its confidence (probability), helping traders make quick, data-driven decisions.
 
 ---
 
@@ -16,7 +16,7 @@ This project is a real-time AI classifier that predicts whether BTCUSDT will go 
 - **Clear Prediction:** Outputs “HIGH” or “LOW” plus the confidence percentage for each call.
 - **Feature Engineering:** Uses technical indicators (EMA30, EMA50, MACD, Bollinger Bands, volume) as model inputs.
 - **Practical Performance:** Shows accuracy and confidence stats for recent predictions.
-- **Multiple Models Tested:** Explored TensorFlow and XGBoost during training, but currently focuses on binary classification (best performing model).
+- **Multiple Models Tested:** Explored RandomForestClassifier and XGBoost during training, but currently focuses on tensorflow for time series problem(best performing model).
 - **Easy to Run:** Start real-time predictions with a single command.
 
 ---
@@ -26,16 +26,16 @@ This project is a real-time AI classifier that predicts whether BTCUSDT will go 
 - **Python 3**
 - **Binance API** (real-time candlestick data)
 - **Pandas, NumPy** (data processing)
-- **Scikit-learn, XGBoost, TensorFlow** (classification models – best performer used)
+- **Scikit-learn, XGBoost, TensorFlow** (tensorflow model – best performer used)
 - **TA-Lib** (technical indicators)
-- **Matplotlib** (optional, for visualizations)
+
 
 ---
 
 ## How It Works
 
 1. **Data Collection:** Fetches 1-minute OHLCV data for BTCUSDT from Binance.
-2. **Feature Engineering:** Calculates EMA30, EMA50, MACD, Bollinger Bands, and volume for each candle.
+2. **Feature Engineering:** Calculates RSI, EMA30, EMA50, MACD, Bollinger Bands, and volume for each candle.
 3. **Prediction:** For every new candle, predicts if price will go “HIGH” or “LOW” over the next 10 minutes, with accuracy/confidence score.
 4. **Evaluation:** Prints accuracy and recent prediction confidence during live operation.
 
